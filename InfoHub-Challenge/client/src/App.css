@@ -1,0 +1,23 @@
+/* src/app.css */
+.app-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.quote-container, .weather-container, .currency-container {
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input {
+  margin-top: 10px;
+  padding: 5px;
+  width: 100px;
+}
+
