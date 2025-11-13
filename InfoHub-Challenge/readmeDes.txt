@@ -3,24 +3,24 @@ layered structure of your InfoHub-Challenge project:
 
 
  InfoHub-Challenge/
- ¦
+ Â¦
  +-- client/                      (React Frontend)
- ¦   +-- package.json
- ¦   +-- vite.config.js
- ¦   +-- index.html
- ¦   +-- .gitignore
- ¦   ¦
- ¦   +-- src/
- ¦   ¦   +-- main.jsx
- ¦   ¦   +-- app.jsx             (Main UI container)
- ¦   ¦   +-- app.css 
- ¦   ¦   +-- index.css
- ¦   ¦
- ¦   +-- components/             (Your UI Components Folder)
- ¦       +-- WeatherComponent.jsx
- ¦       +-- CurrencyComponent.jsx
- ¦       +-- QuoteComponent.jsx
- ¦
+ Â¦   +-- package.json
+ Â¦   +-- vite.config.js
+ Â¦   +-- index.html
+ Â¦   +-- .gitignore
+ Â¦   Â¦
+ Â¦   +-- src/
+ Â¦   Â¦   +-- main.jsx
+ Â¦   Â¦   +-- app.jsx             (Main UI container)
+ Â¦   Â¦   +-- app.css 
+ Â¦   Â¦   +-- index.css
+ Â¦   Â¦
+ Â¦   +-- components/             (Your UI Components Folder)
+ Â¦       +-- WeatherComponent.jsx
+ Â¦       +-- CurrencyComponent.jsx
+ Â¦       +-- QuoteComponent.jsx
+ Â¦
  +-- server/        (Node + Express Backend)
      +-- server.js  (APIs for weather, currency, quotes)
      +-- keys.env   (API Keys Stored Here)
@@ -31,19 +31,19 @@ layered structure of your InfoHub-Challenge project:
 
 
 
-TO Start Whole project:
+TO Start project:
 
-step 1:
-  
-  - In ./server Folder run server.js to start the server at Backend side
+Step 1:
+  - Open InfoHub-Challenge project folder in VS Code
 
+Step 2:
+  - In ./server Folder run server.js file to start the server at Backend side, server URL: "http://localhost:3001/api/---"
 
-step 2:
-   
-  - In ./client Folder run command "npm run dev" to start the server at Frontend side
+step 3:
+  - In Terminal go to ./client Folder run command "npm run dev" to start the server at Frontend side URL: "http://localhost:3000"
 
+//////// Now URL "http://localhost:3000" in Google Browser to see the Info-Challenge Webpage //////////////
 
 
 Important NOTE:
-
   - The https://weatherstack.com/ API site have "limited free APL calls" out of 100, i already used 33/100 calls. 
