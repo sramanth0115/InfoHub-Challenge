@@ -1,9 +1,13 @@
-require('dotenv').config({ path: 'C:/Users/Unic/sra_vs/vs_projects/InfoHub-Challenge/server/keys.env' });
+let path_ = require('path');
+path_ = path_.join(__dirname, "keys.env")
+
+require('dotenv').config({ path: path_ });
 const WEATHERSTACK_API_KEY = process.env.WEATHERSTACK_API_KEY;
 
 const express = require("express");
 const cors = require("cors");
-const fetch = require("node-fetch")
+const fetch = require("node-fetch");
+const { dirname } = require('path');
 const app = express();
 app.use(cors());
 const PORT = process.env.PORT || 3001;
@@ -71,18 +75,16 @@ app.get('/api/weather', async(req, res)=>{
     try{
         let data = await fetch(`http://api.weatherstack.com/current?access_key=${WEATHERSTACK_API_KEY}&query=hyderabad`);
         let weather = await data.json();
-
         let weather_temp = weather.current.temperature;
         let weather_descr = weather.current.weather_descriptions[0]
 
         if ((!weather_temp) || (!weather_descr)) {
             return res.status(500).json({ error: "Could not fetch weather data. API is down" });
           }
-
         res.json({temperature:weather_temp, condition:weather_descr})
     }
     catch(e){
-        res.status(500).json({error: "Could not fetch Weather data."});
+        res.status(500).json({error: "sra Could not fetch Weather data."});
     }
 })
 
