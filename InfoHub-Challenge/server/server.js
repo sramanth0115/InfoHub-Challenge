@@ -7,7 +7,6 @@ const WEATHERSTACK_API_KEY = process.env.WEATHERSTACK_API_KEY;
 const express = require("express");
 const cors = require("cors");
 const fetch = require("node-fetch");
-const { dirname } = require('path');
 const app = express();
 app.use(cors());
 const PORT = process.env.PORT || 3001;
